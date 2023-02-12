@@ -24,9 +24,10 @@ Pod::Spec.new do |spec|
   spec.author             =  "Identomat Inc."
   spec.swift_versions = '5'
   spec.ios.deployment_target = '12.0'
-  spec.source       = { :http => "https://gitlab.com/identomat-public/identomat-ios-framework-public/-/blob/master/identomat.xcframework.zip"}
+  spec.source       = { :git => "https://github.com/irakli941/TestFrameWork.git" }
   # spec.source       = { :git => "https://gitlab.com/identomat-public/identomat-ios-framework-public/-/blob/master/identomat.xcframework.zip", :tag => "#{spec.version}" }
-  spec.ios.vendored_frameworks = 'identomat.xcframework.zip'
+  spec.ios.vendored_frameworks = 'identomat.xcframework'
+  spec.source_files = 'identomat.xcframework/**/*.h'
   spec.dependency 'WebRTC-lib'
   
   #spec.exclude_files = "Classes/Exclude"
